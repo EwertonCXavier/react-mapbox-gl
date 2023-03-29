@@ -11,7 +11,7 @@ import { Geocoder } from "./Geocoder";
 export const App = () => {
   const [latitude, setLatitude] = useState<number>(0);
   const [longitude, setLongitude] = useState<number>(0);
-  const mapRef = useRef<mapboxgl.Map | null>(null);
+  const mapRef = useRef<any>(null);
 
   useEffect(() => {
     if (latitude === 0 && longitude === 0) {
@@ -43,6 +43,7 @@ export const App = () => {
       }}
     >
       <ReactMapGL
+        ref={mapRef}
         mapboxAccessToken={import.meta.env.VITE_API_KEY}
         initialViewState={{
           longitude,
