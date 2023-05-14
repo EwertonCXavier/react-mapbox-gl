@@ -46,11 +46,8 @@ export const App = () => {
           latitude,
           zoom: 8,
         }}
-        // Option for simple map view
-        // mapStyle="mapbox://styles/mapbox/streets-v11"
-
-        // Options for satellite view
-        mapStyle="mapbox://styles/mapbox/satellite-v9"
+        // In order to get other version for the map, access the following link: https://docs.mapbox.com/api/maps/styles/
+        mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
         projection={"globe"}
       >
         <Marker
