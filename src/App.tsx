@@ -20,7 +20,6 @@ export const App = () => {
           return response.json();
         })
         .then((data: any) => {
-          console.log({ data });
           mapRef.current?.flyTo({
             center: [data.longitude, data.latitude],
           });
@@ -29,10 +28,6 @@ export const App = () => {
           setLongitude(data.longitude);
         });
     }
-  }, [latitude, longitude]);
-
-  useEffect(() => {
-    console.log({ latitude, longitude });
   }, [latitude, longitude]);
 
   return (

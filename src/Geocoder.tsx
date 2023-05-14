@@ -8,12 +8,6 @@ interface IGeocode {
 }
 
 export const Geocoder = ({ setLatitude, setLongitude }: IGeocode) => {
-  console.log(
-    {
-      env: import.meta.env.VITE_API_KEY,
-    },
-    []
-  );
   const ctrl = new MapboxGeocoder({
     accessToken: import.meta.env.VITE_API_KEY,
     marker: false,
