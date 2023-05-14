@@ -3,6 +3,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import ReactMapGL, {
   GeolocateControl,
+  MapRef,
   Marker,
   NavigationControl,
 } from "react-map-gl";
@@ -11,7 +12,7 @@ import { Geocoder } from "./Geocoder";
 export const App = () => {
   const [latitude, setLatitude] = useState<number>(0);
   const [longitude, setLongitude] = useState<number>(0);
-  const mapRef = useRef<any>(null);
+  const mapRef = useRef<MapRef>(null);
 
   useEffect(() => {
     if (latitude === 0 && longitude === 0) {
