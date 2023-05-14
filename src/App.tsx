@@ -50,7 +50,12 @@ export const App = () => {
           latitude,
           zoom: 8,
         }}
-        mapStyle="mapbox://styles/mapbox/streets-v11"
+        // Option for simple map view
+        // mapStyle="mapbox://styles/mapbox/streets-v11"
+
+        // Options for satellite view
+        mapStyle="mapbox://styles/mapbox/satellite-v9"
+        projection={"globe"}
       >
         <Marker
           latitude={latitude}
